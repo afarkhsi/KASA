@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './index.css';
 import Home from './pages/Home';
-import Banner from './components/Banner';
+import Error from './components/Error';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,8 +15,8 @@ root.render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/A_propos" element={<Home />} />
+        <Route path="*" element={<Error />} />
       </Routes>
-      <Banner />
     </Router>
   </React.StrictMode>
 );

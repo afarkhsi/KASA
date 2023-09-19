@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.Home_container_offers_card {
+  background-image: linear-gradient(to bottom, white 53%, rgb(0, 0, 0) 80%);
+}
