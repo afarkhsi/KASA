@@ -6,6 +6,8 @@ import Home from './pages/Home';
 import Error from './components/Error';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header';
+import Apartment from './pages/ApartmentPage';
+import Footer from './components/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,8 +17,10 @@ root.render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/A_propos" element={<Home />} />
+        <Route path="/Appartement" element={<Apartment />} />
         <Route path="*" element={<Error />} />
       </Routes>
+      <Footer />
     </Router>
   </React.StrictMode>
 );

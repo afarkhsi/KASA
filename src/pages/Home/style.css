@@ -40,3 +40,7 @@
 .Home_container_offers_card {
   background-image: linear-gradient(to bottom, white 53%, rgb(0, 0, 0) 80%);
 }
+
+.Home_container_offers_card:hover {
+  text-decoration: #282c34;
+}

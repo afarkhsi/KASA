@@ -1,34 +1,45 @@
 import styled from 'styled-components';
 import colors from '../../utils/styles/colors';
 import ErrorIllustration from '../../assets/404.png';
+import { Link } from 'react-router-dom';
 
 const ErrorWrapper = styled.div`
-  margin: 30px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   background-color: ${colors.backgroundLight};
   align-items: center;
 `;
 
-const ErrorTitle = styled.h3`
-  font-weight: 300;
-`;
-
-const ErrorSubtitle = styled.h4`
+const ErrorSubtitle = styled.h2`
   font-weight: 300;
   color: ${colors.primary};
 `;
 
 const Illustration = styled.img`
-  max-width: 800px;
+width: 597px
+height: 263px
 `;
+
+const ReturnMain = styled(Link)`
+  font-family: Montserrat;
+  font-size: 18px;
+  color: #ff6060;
+  font-weight: 500;
+`;
+
+// const ReturnMainTitle = styled.h3`
+
+// `
 
 function Error() {
   return (
     <ErrorWrapper>
-      <ErrorTitle>Oups...</ErrorTitle>
       <Illustration src={ErrorIllustration} />
-      <ErrorSubtitle>Oups 🙈 Cette page n'existe pas</ErrorSubtitle>
+      <ErrorSubtitle>
+        Oups! La page que vous demandez n'existe pas.
+      </ErrorSubtitle>
+      <ReturnMain to="/">Retourner sur la page d’accueil</ReturnMain>
     </ErrorWrapper>
   );
 }

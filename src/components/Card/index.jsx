@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import colors from '../../utils/styles/colors';
 import { Link } from 'react-router-dom';
-// import PropTypes from 'prop-types';
+// import Appartement from '../../pages/DetailCard';
+import PropTypes from 'prop-types';
 
 // const CardsContainer = styled.div`
 //   margin-top: 50px;
@@ -40,9 +41,17 @@ const CardTitle = styled.h2`
 `;
 
 function Cards({ id, title, cover }) {
+  const state = {
+    apartmentId: id,
+  };
   return (
     // <CardsContainer className="Home_container_offers">
-    <Card id={id} className="Home_container_offers_card">
+    <Card
+      to="/Appartement"
+      state={state}
+      id={id}
+      className="Home_container_offers_card"
+    >
       <CardImage
         src={cover}
         className="Home_container_offers_card_img"
@@ -56,16 +65,16 @@ function Cards({ id, title, cover }) {
   );
 }
 
-// Cards.propTypes = {
-//   label: PropTypes.string.isRequired,
-//   title: PropTypes.string.isRequired,
-//   picture: PropTypes.string.isRequired,
-// };
+Cards.propTypes = {
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  cover: PropTypes.any.isRequired,
+};
 
-// Cards.defaultProps = {
-//   title: 'Une titre par default',
-//   label: 'Un label par default',
-//   picture: 'Une image manquante',
-// };
+Cards.defaultProps = {
+  id: 'Un id par default',
+  title: 'Une titre par default',
+  cover: 'Une image manquante',
+};
 
 export default Cards;

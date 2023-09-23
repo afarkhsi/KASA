@@ -11,9 +11,10 @@ const BannerContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 30px;
   border-radius: 5px;
   background-color: black;
+  max-width: 1240px;
+  margin: 30px auto;
 `;
 
 const BannerImg = styled.img`
