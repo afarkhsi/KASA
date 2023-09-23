@@ -44,6 +44,7 @@ function Cards({ id, title, cover }) {
   const state = {
     apartmentId: id,
   };
+
   return (
     // <CardsContainer className="Home_container_offers">
     <Card

@@ -64,9 +64,11 @@ const DetailDropdownItem = styled.li`
   list-style-type: none;
 `;
 
-function DropDowns() {
+function DropDowns(props) {
   const [open, setOpen] = useState(false);
   const [openList, setOpenList] = useState(false);
+  const data = props.data;
+  const dataList = data.equipments;
 
   return (
     <DropdownsWrapper>
@@ -84,7 +86,7 @@ function DropDowns() {
         <DetailDropdownMenuStuff
           className={`dropdown_stuff ${open ? 'active' : 'inactive'}`}
         >
-          BLABLABAALAAJKAJLA
+          {data.description}
         </DetailDropdownMenuStuff>
       </DetailsContainer>
 
@@ -96,28 +98,17 @@ function DropDowns() {
           }}
         >
           <DetailDropdownTitle className="dropdown_button_title">
-            Description
+            Équipement
           </DetailDropdownTitle>
         </DetailDropdown>
         <DetailDropdownMenu
           className={`dropdown_list ${openList ? 'active' : 'inactive'}`}
         >
-          <DetailDropdownItem className="dropdown_list_item">
-            {' '}
-            Test
-          </DetailDropdownItem>
-          <DetailDropdownItem className="dropdown_list_item">
-            {' '}
-            Test
-          </DetailDropdownItem>
-          <DetailDropdownItem className="dropdown_list_item">
-            {' '}
-            Test
-          </DetailDropdownItem>
-          <DetailDropdownItem className="dropdown_list_item">
-            {' '}
-            Test
-          </DetailDropdownItem>
+          {dataList?.map((list) => (
+            <DetailDropdownItem className="dropdown_list_item">
+              {list}
+            </DetailDropdownItem>
+          ))}
         </DetailDropdownMenu>
       </DetailsContainer>
     </DropdownsWrapper>

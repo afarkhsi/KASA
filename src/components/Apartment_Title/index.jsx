@@ -24,6 +24,11 @@ const PageSubtitle = styled.h2`
   padding-bottom: 30px;
 `;
 
+const PageTagsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
 const PageTags = styled.span`
   font-size: 14px;
   font-weight: 300;
@@ -35,12 +40,19 @@ const PageTags = styled.span`
   border-radius: 15px;
 `;
 
-function TitleTags() {
+function TitleTags(props) {
+  const data = props.data;
+  const dataTags = data.tags;
   return (
     <TitleContainer>
-      <PageTitle>Titre principal</PageTitle>
-      <PageSubtitle>Description</PageSubtitle>
-      <PageTags>Cosy</PageTags>
+      <PageTitle>{data.title}</PageTitle>
+      <PageSubtitle>{data.location}</PageSubtitle>
+      <PageTagsContainer>
+        {/* {dataTags} */}
+        {dataTags?.map((tag) => (
+          <PageTags key={tag}>{tag}</PageTags>
+        ))}
+      </PageTagsContainer>
     </TitleContainer>
   );
 }

@@ -14,6 +14,7 @@ const CarrouselContainer = styled.div`
 const CarrouselImg = styled.img`
   width: 100%;
   object-fit: cover;
+  height: 100%;
 `;
 
 function Carrousel(props) {

@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 import Carrousel from '../../components/Carrousel';
-import TitleTags from '../../components/Apartment_Title_Tags';
+import TitleTags from '../../components/Apartment_Title';
 import Profil from '../../components/Apartment_Profil';
 import DropDowns from '../../components/Apartment_Details';
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { Loader } from '../../utils/styles/Atoms';
-import { RentalsContext } from '../..';
+// import { Loader } from '../../utils/styles/Atoms';
+// import { useSearchParams } from 'react-router-dom';
+// import ApartmentTest from '../../components/Apartment_test';
 
 const ApartmentWrapper = styled.section`
   max-width: 1240px;
@@ -27,70 +28,42 @@ const ProfilWrapper = styled.section`
 //   align-items: center;
 // `;
 
-// const DropdownsWrapper = styled.section`
-//   max-width: 1240px;
-//   margin-top: 50px;
-//   display: grid;
-//   grid-template-columns: 1fr 1fr;
-//   gap: 3rem;
-// `;
-
 function Apartment() {
   const location = useLocation();
   console.log('Appartement ID :', location.state.apartmentId);
 
-  // const [data, setData] = useState(null);
-  // useEffect(fetchAppartment, []);
+  const [data, setData] = useState([]);
+  // let [searchParams, setSearchParams] = useSearchParams()
 
-  // function fetchAppartment() {
-  //   fetch('./data.json')
-  //     .then((response) => response.json())
-  //     .then((apartments) => {
-  //       const apartmentFilter = apartments.find(
-  //         (apartment) => apartment.id === location.state.apartmentId
-  //       );
-  //       setData(data);
-  //       console.log(apartmentFilter);
-  //     })
-  //     .catch(console.error);
-  //   return data;
-  // }
+  // console.log('URL ID:', urlPhotographerId);
 
-  const [data, setData] = useState();
-  const [isLoading, setLoading] = useState(true);
-
-  useEffect(test, []);
-
-  function test() {
-    if (!'./data.json') return;
-    setLoading(true);
-    const fetchAppartment = async () => {
-      const response = await fetch('./data.json');
-      const json = await response.json();
-      const apartmentFilter = json.find(
-        (apartment) => apartment.id === location.state.apartmentId
-      );
-      console.log('DATA du produit : ', apartmentFilter);
-      if (response.ok) {
+  useEffect(() => {
+    fetch('./data.json')
+      .then((r) => r.json())
+      .then((aparts) => {
+        const apartmentFilter = aparts.find(
+          (apartment) => apartment.id === location.state.apartmentId
+        );
         setData(apartmentFilter);
-        setLoading(false);
-      }
-    };
+        console.log('Fetch data par ID:', apartmentFilter);
+      });
+  }, []);
 
-    fetchAppartment();
-  }
+  // const profilHost = data.filter((d) => d.host === data.host);
 
-  // console.log('test dataa:', data.cover);
+  // console.log('proprio:', data.host.name);
+
+  if (data == null) return <div>Loading ....</div>;
 
   return (
     <ApartmentWrapper className="apartment_page">
-      data: {JSON.stringify(data)}
-      <Carrousel imageUrl="" />
+      {/* data: {JSON.stringify(data)} */}
+      <Carrousel imageUrl={data.cover} />
       <ProfilWrapper>
-        <TitleTags />
-        <Profil />
+        <TitleTags data={data} />
+        <Profil data={data} />
       </ProfilWrapper>
-      <DropDowns />
+      <DropDowns data={data} />
     </ApartmentWrapper>
   );
 }
