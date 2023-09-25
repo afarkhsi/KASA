@@ -2,6 +2,7 @@ import colors from '../../utils/styles/colors';
 import styled from 'styled-components';
 import { useState } from 'react';
 import './style.css';
+import ArrowImg from '../../assets/arrow.svg';
 
 const DropdownsWrapper = styled.section`
   max-width: 1240px;
@@ -25,6 +26,9 @@ const DetailDropdown = styled.div`
   height: 52px;
   border-radius: 10px;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const DetailDropdownTitle = styled.h3`
@@ -71,7 +75,7 @@ function DropDowns(props) {
   const dataList = data.equipments;
 
   return (
-    <DropdownsWrapper>
+    <DropdownsWrapper className="test">
       <DetailsContainer className="dropdown">
         <DetailDropdown
           className="dropdown_button"
@@ -82,6 +86,11 @@ function DropDowns(props) {
           <DetailDropdownTitle className="dropdown_button_title">
             Description
           </DetailDropdownTitle>
+          <img
+            className={open ? 'arrow spinned' : 'arrow'}
+            src={ArrowImg}
+            alt="arrow"
+          />
         </DetailDropdown>
         <DetailDropdownMenuStuff
           className={`dropdown_stuff ${open ? 'active' : 'inactive'}`}
@@ -100,6 +109,11 @@ function DropDowns(props) {
           <DetailDropdownTitle className="dropdown_button_title">
             Équipement
           </DetailDropdownTitle>
+          <img
+            className={openList ? 'arrow spinned' : 'arrow'}
+            src={ArrowImg}
+            alt="arrow"
+          />
         </DetailDropdown>
         <DetailDropdownMenu
           className={`dropdown_list ${openList ? 'active' : 'inactive'}`}

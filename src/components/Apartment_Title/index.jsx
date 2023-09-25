@@ -11,7 +11,6 @@ const PageTitle = styled.h1`
   font-size: 36px;
   font-weight: 500;
   text-align: center;
-  padding-bottom: 30px;
   color: ${colors.primary};
   margin: auto;
 `;
@@ -21,12 +20,12 @@ const PageSubtitle = styled.h2`
   color: ${colors.primary};
   font-weight: 500;
   text-align: center;
-  padding-bottom: 30px;
 `;
 
 const PageTagsContainer = styled.div`
   display: flex;
   flex-direction: row;
+  gap: 1rem;
 `;
 
 const PageTags = styled.span`
@@ -35,9 +34,13 @@ const PageTags = styled.span`
   text-align: center;
   background-color: ${colors.primary};
   color: ${colors.light};
-  width: 115px;
+  min-width: 115px;
   height: 25px;
-  border-radius: 15px;
+  border-radius: 10px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
 `;
 
 function TitleTags(props) {

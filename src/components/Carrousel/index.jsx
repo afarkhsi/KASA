@@ -6,8 +6,6 @@ const CarrouselContainer = styled.div`
   width: 1240px;
   height: 415px;
   margin: auto;
-  border: 5px solid black;
-  color: ${colors.primary};
   border-radius: 10px;
 `;
 
@@ -19,7 +17,7 @@ const CarrouselImg = styled.img`
 
 function Carrousel(props) {
   return (
-    <CarrouselContainer>
+    <CarrouselContainer className="apartment_page_caroussel_img">
       <CarrouselImg src={props.imageUrl} alt="" />
     </CarrouselContainer>
   );

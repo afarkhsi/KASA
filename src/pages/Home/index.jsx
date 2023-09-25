@@ -6,13 +6,15 @@ import { Loader } from '../../utils/styles/Atoms';
 import './style.css';
 import { useFetch } from '../../utils/Hooks/index';
 // import { useEffect, useState } from 'react';
-import Error from '../../components/Error';
+// import Error from '../../components/Error';
+import Image from '../../assets/Falaises.png';
 
-const HomeWrapper = styled.div`
+const HomeWrapper = styled.main`
   display: flex;
   justify-content: center;
   margin: auto;
   flex-direction: column;
+  margin-bottom: 80px;
 `;
 
 const LoaderWrapper = styled.div`
@@ -82,11 +84,10 @@ function Home() {
 
   return (
     <HomeWrapper className="Home_container">
-      <Banner />
+      <Banner imageUrl={Image} text="Chez vous, partout et ailleurs" />
       {isLoading ? (
         <LoaderWrapper className="loader">
           <Loader />
-          <Error />
         </LoaderWrapper>
       ) : (
         <CardsContainer className="Home_container_offers">

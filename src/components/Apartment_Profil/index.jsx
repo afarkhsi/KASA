@@ -39,6 +39,7 @@ const StarsContainer = styled.div`
   flex-direction: row;
   align-items: flex-end;
   gap: 0.5rem;
+  margin-top: 20px;
 `;
 
 const Star = styled.img`

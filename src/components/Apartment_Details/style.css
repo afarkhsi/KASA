@@ -2,6 +2,7 @@
   opacity: 1;
   visibility: visible;
   transition: 500ms ease;
+  margin: 10px 0px;
 }
 
 .dropdown_list.inactive {
@@ -14,10 +15,26 @@
   opacity: 1;
   visibility: visible;
   transition: 500ms ease;
+  margin: 10px 0px;
 }
 
 .dropdown_stuff.inactive {
   opacity: 0;
   visibility: hidden;
   transition: 500ms ease;
+}
+
+.arrow {
+  width: 9px;
+  transform: rotate(0deg);
+  transition: 0.3s ease-in-out;
+  color: white;
+  width: 24px;
+  padding-right: 10px;
+}
+
+.spinned {
+  transform: rotate(180deg);
+  transition: 0.3s ease-in-out;
+  padding-left: 10px;
 }

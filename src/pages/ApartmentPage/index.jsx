@@ -9,7 +9,7 @@ import { useState, useEffect } from 'react';
 // import { useSearchParams } from 'react-router-dom';
 // import ApartmentTest from '../../components/Apartment_test';
 
-const ApartmentWrapper = styled.section`
+const ApartmentWrapper = styled.main`
   max-width: 1240px;
   margin: auto;
 `;
@@ -58,12 +58,19 @@ function Apartment() {
   return (
     <ApartmentWrapper className="apartment_page">
       {/* data: {JSON.stringify(data)} */}
-      <Carrousel imageUrl={data.cover} />
-      <ProfilWrapper>
-        <TitleTags data={data} />
-        <Profil data={data} />
+      <Carrousel
+        imageUrl={data.cover}
+        className="apartment_page_caroussel_img"
+      />
+      <ProfilWrapper className="apartment_page_profil">
+        <TitleTags data={data} className="apartment_page_profil_title_tags" />
+        <Profil data={data} className="apartment_page_profil_info" />
       </ProfilWrapper>
-      <DropDowns data={data} />
+      <DropDowns
+        key={data.id}
+        data={data}
+        className="apartment_page_dopdowns"
+      />
     </ApartmentWrapper>
   );
 }

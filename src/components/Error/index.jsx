@@ -3,12 +3,13 @@ import colors from '../../utils/styles/colors';
 import ErrorIllustration from '../../assets/404.png';
 import { Link } from 'react-router-dom';
 
-const ErrorWrapper = styled.div`
+const ErrorWrapper = styled.main`
   margin: auto;
   display: flex;
   flex-direction: column;
   background-color: ${colors.backgroundLight};
   align-items: center;
+  justify-content: center;
 `;
 
 const ErrorSubtitle = styled.h2`
@@ -34,7 +35,7 @@ const ReturnMain = styled(Link)`
 
 function Error() {
   return (
-    <ErrorWrapper>
+    <ErrorWrapper className="error_container">
       <Illustration src={ErrorIllustration} />
       <ErrorSubtitle>
         Oups! La page que vous demandez n'existe pas.

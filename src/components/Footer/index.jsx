@@ -5,11 +5,12 @@ import WhiteLogo from '../../assets/logo_white.png';
 const FooterContainer = styled.div`
   height: 210px;
   background: ${colors.dark};
-  margin-top: 80px;
+  // margin-top: 80px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  // margin-top: 55px;
 `;
 
 const FooterLogo = styled.img`

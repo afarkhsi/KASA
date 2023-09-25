@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import colors from '../../utils/styles/colors';
-import Image from '../../assets/Falaises.png';
 
 const BannerContainer = styled.div`
   height: 223px;
@@ -34,15 +33,17 @@ const BannerTitle = styled.h1`
   font-weight: 300;
 `;
 
-function Banner() {
+function Banner(props) {
+  const imageUrl = props.imageUrl;
+  let textBanner = props.text;
   return (
     <BannerContainer className="Home_container_banner">
       <BannerImg
-        src={Image}
+        src={imageUrl}
         className="Home_container_banner_img"
         alt="Banniere image"
       ></BannerImg>
-      <BannerTitle>Chez vous, partout et ailleurs</BannerTitle>
+      <BannerTitle>{textBanner}</BannerTitle>
     </BannerContainer>
   );
 }
