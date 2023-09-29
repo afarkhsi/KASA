@@ -1,0 +1,18 @@
+.shown {
+  opacity: 1;
+}
+.unshow {
+  opacity: 0;
+}
+
+.apartment_page_caroussel_container_btnPrev img {
+  transform: rotate(270deg);
+  width: 80px;
+  cursor: pointer;
+}
+
+.apartment_page_caroussel_container_btnNext img {
+  width: 80px;
+  transform: rotate(90deg);
+  cursor: pointer;
+}

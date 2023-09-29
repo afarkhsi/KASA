@@ -6,7 +6,6 @@ import ArrowImg from '../../assets/arrow.svg';
 
 const DropdownsWrapper = styled.section`
   max-width: 1240px;
-  margin-top: 50px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;

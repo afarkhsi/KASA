@@ -21,7 +21,7 @@ const DetailsContainer = styled.div`
 
 const DetailDropdown = styled.div`
   background-color: ${colors.primary};
-  margin: auto;
+  // margin: auto;
   width: 100%;
   height: 52px;
   border-radius: 10px;
@@ -94,6 +94,7 @@ function DropDowns(props) {
         </DetailDropdown>
         <DetailDropdownMenuStuff
           className={`dropdown_stuff ${open ? 'active' : 'inactive'}`}
+          key={data.id}
         >
           {data.description}
         </DetailDropdownMenuStuff>
@@ -119,7 +120,7 @@ function DropDowns(props) {
           className={`dropdown_list ${openList ? 'active' : 'inactive'}`}
         >
           {dataList?.map((list) => (
-            <DetailDropdownItem className="dropdown_list_item">
+            <DetailDropdownItem key={list} className="dropdown_list_item">
               {list}
             </DetailDropdownItem>
           ))}

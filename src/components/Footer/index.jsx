@@ -11,6 +11,7 @@ const FooterContainer = styled.div`
   justify-content: center;
   align-items: center;
   // margin-top: 55px;
+  margin: auto 0 0 0;
 `;
 
 const FooterLogo = styled.img`

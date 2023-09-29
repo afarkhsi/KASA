@@ -59,18 +59,14 @@ function Apartment() {
     <ApartmentWrapper className="apartment_page">
       {/* data: {JSON.stringify(data)} */}
       <Carrousel
-        imageUrl={data.cover}
+        pictures={data.pictures}
         className="apartment_page_caroussel_img"
       />
       <ProfilWrapper className="apartment_page_profil">
         <TitleTags data={data} className="apartment_page_profil_title_tags" />
         <Profil data={data} className="apartment_page_profil_info" />
       </ProfilWrapper>
-      <DropDowns
-        key={data.id}
-        data={data}
-        className="apartment_page_dopdowns"
-      />
+      <DropDowns data={data} className="apartment_page_dopdowns" />
     </ApartmentWrapper>
   );
 }

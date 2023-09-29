@@ -10,10 +10,10 @@ const BannerContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  border-radius: 5px;
   background-color: black;
   max-width: 1240px;
-  margin: 30px auto;
+  margin: 30px 0px 50px 0;
+  border-radius: 25px;
 `;
 
 const BannerImg = styled.img`
@@ -23,6 +23,7 @@ const BannerImg = styled.img`
   border-radius: 5px;
   z-index: 0;
   opacity: 0.6;
+  border-radius: 25px;
 `;
 const BannerTitle = styled.h1`
   font-family: 'Montserrat', Helvetica, sans-serif;
