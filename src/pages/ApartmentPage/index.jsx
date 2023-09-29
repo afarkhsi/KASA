@@ -38,7 +38,7 @@ function Apartment() {
   // console.log('URL ID:', urlPhotographerId);
 
   useEffect(() => {
-    fetch('./data.json')
+    fetch('../../data.json')
       .then((r) => r.json())
       .then((aparts) => {
         const apartmentFilter = aparts.find(

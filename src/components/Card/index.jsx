@@ -48,7 +48,7 @@ function Cards({ id, title, cover }) {
   return (
     // <CardsContainer className="Home_container_offers">
     <Card
-      to="/Appartement"
+      to={`/Appartement/${id}`}
       state={state}
       id={id}
       className="Home_container_offers_card"
