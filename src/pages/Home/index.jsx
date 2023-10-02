@@ -12,9 +12,9 @@ import Image from '../../assets/Falaises.png';
 const HomeWrapper = styled.main`
   display: flex;
   justify-content: center;
-  margin: auto;
   flex-direction: column;
-  margin-bottom: 80px;
+  max-width: 1240px;
+  width: 100%;
 `;
 
 const LoaderWrapper = styled.div`
@@ -29,8 +29,6 @@ const CardsContainer = styled.div`
   max-width: 1240px;
   margin: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 3rem;
 `;
 
 // V1 DATA
@@ -60,26 +58,6 @@ const CardsContainer = styled.div`
 
 // V2 DATA
 function Home() {
-  // const [data, setData] = useState(null);
-  // const [isLoading, setLoading] = useState(true);
-
-  // useEffect(() => {
-  //   const fetchProducts = async () => {
-  //     if (!'./data2.json') return;
-  //     setLoading(true);
-  //     const response = await fetch('./data2.json');
-  //     const json = await response.json();
-  //     console.log(response.ok);
-  //     console.log(json);
-  //     if (response.ok) {
-  //       setData(json);
-  //       setLoading(false);
-  //     }
-  //   };
-
-  //   fetchProducts();
-  // }, []);
-
   const { data, isLoading } = useFetch('./data.json');
 
   return (

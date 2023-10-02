@@ -11,7 +11,7 @@ const FooterContainer = styled.div`
   justify-content: center;
   align-items: center;
   // margin-top: 55px;
-  margin: auto 0 0 0;
+  margin: auto -10px 0 -10px;
 `;
 
 const FooterLogo = styled.img`
@@ -20,19 +20,19 @@ const FooterLogo = styled.img`
 `;
 
 const FooterCopyright = styled.span`
-  font-size: 24px;
   font-weight: 500;
   text-align: center;
   color: ${colors.light};
   position: absolute;
-  bottom: 8px;
 `;
 
 function Footer() {
   return (
-    <FooterContainer>
-      <FooterLogo src={WhiteLogo} />
-      <FooterCopyright>© 2020 Kasa. All rights reserved</FooterCopyright>
+    <FooterContainer className="footer_container">
+      <FooterLogo className="footer_container_img" src={WhiteLogo} />
+      <FooterCopyright className="footer_container_text">
+        © 2020 Kasa. All rights reserved
+      </FooterCopyright>
     </FooterContainer>
   );
 }

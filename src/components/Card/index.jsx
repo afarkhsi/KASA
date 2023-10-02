@@ -10,8 +10,6 @@ import PropTypes from 'prop-types';
 
 const Card = styled(Link)`
   display: flex;
-  max-width: 340px;
-  height: 340px;
   border-radius: 10px;
   position: relative;
   &:hover {
@@ -48,7 +46,7 @@ function Cards({ id, title, cover }) {
   return (
     // <CardsContainer className="Home_container_offers">
     <Card
-      to={`/Appartement/${id}`}
+      to={`/Appartement/${state?.apartmentId}`}
       state={state}
       id={id}
       className="Home_container_offers_card"

@@ -1,4 +1,4 @@
-.dropdown_list.active {
+/* .dropdown_list.active {
   opacity: 1;
   visibility: visible;
   transition: 500ms ease;
@@ -9,7 +9,7 @@
   opacity: 0;
   visibility: hidden;
   transition: 500ms ease;
-}
+} */
 
 .dropdown_stuff.active {
   opacity: 1;

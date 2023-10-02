@@ -5,22 +5,22 @@ import colors from '../../utils/styles/colors';
 import './style.css';
 
 const HomeLogo = styled.img`
-  width: 210px;
+  background-color: ${colors.light};
 `;
 
 const NavContainer = styled.nav`
-  padding: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // margin: auto;
+  margin: auto;
+  max-width: 1240px;
+  margin: auto;
+  width: 100%;
 `;
 
 const StyledLink = styled(NavLink)`
-  padding: 10px 15px;
   color: ${colors.primary};
   text-decoration: none;
-  font-size: 18px;
   text-align: center;
   &:hover {
     text-decoration: underline;
@@ -31,11 +31,15 @@ function Header() {
   return (
     <NavContainer className="header">
       <Link className="header_logo" to="/">
-        <HomeLogo src={RedLogo} alt="Kasa logo" />
+        <HomeLogo className="header_logo_img" src={RedLogo} alt="Kasa logo" />
       </Link>
       <div className="header_nav">
-        <StyledLink to="/">Accueil</StyledLink>
-        <StyledLink to="/About">A propos</StyledLink>
+        <StyledLink to="/" className="header_nav_link">
+          Accueil
+        </StyledLink>
+        <StyledLink to="/About" className="header_nav_link">
+          A propos
+        </StyledLink>
       </div>
     </NavContainer>
   );

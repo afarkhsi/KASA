@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import colors from '../../utils/styles/colors';
 
 const BannerContainer = styled.div`
-  height: 223px;
   align-items: center;
   position: relative;
   justify-content: center;
@@ -12,7 +11,6 @@ const BannerContainer = styled.div`
   width: 100%;
   background-color: black;
   max-width: 1240px;
-  margin: 30px 0px 50px 0;
   border-radius: 25px;
 `;
 
@@ -27,11 +25,11 @@ const BannerImg = styled.img`
 `;
 const BannerTitle = styled.h1`
   font-family: 'Montserrat', Helvetica, sans-serif;
-  font-size: 48px;
   color: ${colors.light};
   position: absolute;
   z-index: 1;
   font-weight: 300;
+  padding: 0px 15px;
 `;
 
 function Banner(props) {
@@ -44,7 +42,9 @@ function Banner(props) {
         className="Home_container_banner_img"
         alt="Banniere image"
       ></BannerImg>
-      <BannerTitle>{textBanner}</BannerTitle>
+      <BannerTitle className="Home_container_banner_title">
+        {textBanner}
+      </BannerTitle>
     </BannerContainer>
   );
 }
