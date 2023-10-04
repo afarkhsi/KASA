@@ -1,0 +1,9 @@
+.dropdown_wrapper {
+  gap: 2rem;
+}
+
+@media only screen and (width <= 450px) {
+  .dropdown_wrapper {
+    gap: 1rem;
+  }
+}

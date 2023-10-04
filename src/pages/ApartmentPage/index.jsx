@@ -22,21 +22,9 @@ const DropdownsWrapper = styled.section`
   max-width: 1240px;
 `;
 
-// const LoaderWrapper = styled.div`
-//   display: flex;
-//   justify-content: center;
-//   flex-direction: column;
-//   align-items: center;
-// `;
-
 function Apartment() {
   const location = useLocation();
-  // console.log('Appartement ID :', location?.state?.apartmentId);
-
   const [data, setData] = useState([]);
-  // let [searchParams, setSearchParams] = useSearchParams()
-
-  // console.log('URL ID:', urlPhotographerId);
 
   useEffect(() => {
     fetchApartment(location, setData);
@@ -46,9 +34,6 @@ function Apartment() {
   if (location?.state?.apartmentId == null) {
     return <Error />;
   }
-  // const profilHost = data.filter((d) => d.host === data.host);
-
-  // console.log('proprio:', data.host.name);
 
   if (data == null) return <div>Loading ....</div>;
 
@@ -63,13 +48,11 @@ function Apartment() {
 
   return (
     <ApartmentWrapper className="apartment_page">
-      {/* data: {JSON.stringify(data)} */}
       <Carrousel pictures={data.pictures} />
       <ProfilWrapper className="apartment_page_profil">
         <TitleTags data={data} className="apartment_page_profil_title_tags" />
         <Profil data={data} className="apartment_page_profil_info" />
       </ProfilWrapper>
-      {/* <DropDowns data={data} className="apartment_page_dopdowns" /> */}
       <DropdownsWrapper className="apartment_page_dopdowns">
         <DropDowns
           className="apartment_page_dopdown"

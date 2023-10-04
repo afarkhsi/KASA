@@ -20,3 +20,9 @@ code {
   padding: 0 10px;
   position: relative;
 }
+
+@media only screen and (width <= 450px) {
+  .header_nav {
+    text-transform: uppercase;
+  }
+}

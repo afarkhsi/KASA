@@ -1,0 +1,15 @@
+.error_container_subtitle {
+  font-size: 36px;
+}
+.error_container_homelink {
+  font-size: 18px;
+}
+
+@media only screen and (width <= 450px) {
+  .error_container_subtitle {
+    font-size: 18px;
+  }
+  .error_container_homelink {
+    font-size: 14px;
+  }
+}

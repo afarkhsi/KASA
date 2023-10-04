@@ -44,8 +44,6 @@ function Profil(props) {
   const profilName = data?.host?.name;
   const profilImg = data?.host?.picture;
   const profilRating = data?.rating;
-  // const [firstName, lastName] = profilName?.split(' ');
-  // console.log(firstName);
   const stars = [1, 2, 3, 4, 5];
 
   return (

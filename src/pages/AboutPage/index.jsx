@@ -4,9 +4,10 @@ import Banner from '../../components/Banner';
 import DropDowns from '../../components/Apartment_Details';
 import Montagnes from '../../assets/Montagnes.png';
 import dataAbout from '../../data/aboutData.json';
+import './style.css';
 
 const AboutWrapper = styled.main`
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   background-color: ${colors.backgroundLight};
@@ -14,13 +15,14 @@ const AboutWrapper = styled.main`
   justify-content: center;
   max-width: 1240px;
   width: 100%;
+  margin-bottom: 20px;
 `;
 
 const DropdownsWrapper = styled.section`
   max-width: 1023px;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  width: 100%;
 `;
 
 function About() {
