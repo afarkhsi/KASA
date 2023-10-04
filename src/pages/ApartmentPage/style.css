@@ -69,6 +69,10 @@
   font-size: 18px;
 }
 
+.apartment_page_caroussel_container_picnumber {
+  font-size: 18px;
+}
+
 @media only screen and (width <= 750px) {
   .apartment_page_caroussel_container {
     width: 100%;
@@ -131,6 +135,15 @@
   }
   .arrow {
     width: 9px;
+  }
+  .apartment_page_caroussel_container_btnPrev img {
+    width: 24px;
+  }
+  .apartment_page_caroussel_container_btnNext img {
+    width: 24px;
+  }
+  .apartment_page_caroussel_container_picnumber {
+    font-size: 13px;
   }
 }
 

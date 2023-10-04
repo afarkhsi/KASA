@@ -22,7 +22,6 @@ const CarrouselImg = styled.img`
 const CarrouselBtnNext = styled.button`
   height: 100%;
   background: none;
-
   border: none;
   position: absolute;
   z-index: 1;
@@ -57,7 +56,6 @@ const CarrouselPictureNumber = styled.span`
   z-index: 1;
   text-align: center;
   color: white;
-  font-size: 18px;
   font-weight: 500;
   text-align: center;
   margin-bottom: 26px;
@@ -107,7 +105,7 @@ function Carrousel(props) {
       )}
 
       {rules > 1 ? (
-        <CarrouselPictureNumber>
+        <CarrouselPictureNumber className="apartment_page_caroussel_container_picnumber">
           {index.toString()} / {pictures?.length.toString()}
         </CarrouselPictureNumber>
       ) : (
