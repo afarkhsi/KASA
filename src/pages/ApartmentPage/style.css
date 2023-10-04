@@ -1,0 +1,138 @@
+.apartment_page_caroussel_container {
+  width: 100%;
+  height: 415px;
+}
+
+.apartment_page_profil {
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.apartment_page_profil_container_title {
+  font-size: 36px;
+  margin: auto;
+}
+
+.apartment_page_profil_container_subtitle {
+  font-size: 18px;
+}
+
+.apartment_page_profil_container_tags_item {
+  min-width: 115px;
+  font-size: 14px;
+  height: 25px;
+}
+
+.profil_container {
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.profil_container_info_name {
+  font-size: 18px;
+}
+
+.profil_container_info_img {
+  width: 64px;
+  height: 64px;
+}
+
+.profil_container_rating {
+  gap: 0.5rem;
+  margin-top: 20px;
+}
+
+.profil_container_rating_star {
+  width: 36px;
+}
+
+.apartment_page_dopdowns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 50px;
+  gap: 3rem;
+}
+
+.dropdown_container {
+  max-height: 250px;
+}
+
+.dropdown_button {
+  height: 52px;
+}
+
+.dropdown_button_title {
+  font-size: 18px;
+}
+
+.dropdown_stuff {
+  font-size: 18px;
+}
+
+@media only screen and (width <= 750px) {
+  .apartment_page_caroussel_container {
+    width: 100%;
+    height: 255px;
+  }
+  .apartment_page_profil {
+    justify-content: space-between;
+    margin-top: 50px;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .apartment_page_profil_container_title {
+    font-size: 18px;
+    margin: 0;
+  }
+  .apartment_page_profil_container_subtitle {
+    font-size: 14px;
+  }
+  .apartment_page_profil_container_tags_item {
+    min-width: 84px;
+    font-size: 10px;
+    height: 18px;
+  }
+  .profil_container {
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .profil_container_info_name {
+    font-size: 12px;
+  }
+  .profil_container_info_img {
+    width: 32px;
+    height: 32px;
+  }
+  .profil_container_rating {
+    gap: 0rem;
+    margin-top: 20px;
+  }
+  .profil_container_rating_star {
+    width: 18px;
+  }
+  .apartment_page_dopdowns {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+    gap: 0rem;
+  }
+  .dropdown_container {
+    max-height: 250px;
+  }
+  .dropdown_button {
+    height: 30px;
+  }
+  .dropdown_button_title {
+    font-size: 13px;
+  }
+  .dropdown_stuff {
+    font-size: 13px;
+  }
+  .arrow {
+    width: 9px;
+  }
+}
+
+@media only screen and (width <= 450px) {
+}

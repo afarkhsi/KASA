@@ -12,9 +12,8 @@ const NavContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: auto;
   max-width: 1240px;
-  margin: auto;
+  margin: 0 auto;
   width: 100%;
 `;
 

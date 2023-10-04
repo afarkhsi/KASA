@@ -80,6 +80,10 @@
   text-decoration: #282c34;
 }
 
+.footer_container {
+  margin: auto -10px 0 -10px;
+}
+
 .footer_container_text {
   font-size: 24px;
   bottom: 8px;

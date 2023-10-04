@@ -5,8 +5,6 @@ import EmptyStar from '../../assets/star-inactive.svg';
 
 const ProfilContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
 `;
 
 const ProfilDiv = styled.div`
@@ -16,7 +14,6 @@ const ProfilDiv = styled.div`
 `;
 
 const ProfilTitle = styled.div`
-  font-size: 18px;
   font-weight: 500;
   text-align: center;
   color: ${colors.primary};
@@ -29,8 +26,6 @@ const ProfilTitle = styled.div`
 `;
 
 const ProfilImg = styled.img`
-  width: 64px;
-  height: 64px;
   border-radius: 50%;
 `;
 
@@ -38,13 +33,10 @@ const StarsContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  gap: 0.5rem;
-  margin-top: 20px;
 `;
 
 const Star = styled.img`
-  width: 36px;
-  height: 36px;
+  background: none;
 `;
 
 function Profil(props) {

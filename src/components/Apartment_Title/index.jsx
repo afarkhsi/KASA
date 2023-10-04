@@ -8,15 +8,12 @@ const TitleContainer = styled.div`
 `;
 
 const PageTitle = styled.h1`
-  font-size: 36px;
   font-weight: 500;
-  text-align: center;
   color: ${colors.primary};
-  margin: auto;
+  text-align: start;
 `;
 
 const PageSubtitle = styled.h2`
-  font-size: 18px;
   color: ${colors.primary};
   font-weight: 500;
   text-align: center;
@@ -26,16 +23,14 @@ const PageTagsContainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 1rem;
+  flex-wrap: wrap;
 `;
 
 const PageTags = styled.span`
-  font-size: 14px;
   font-weight: 300;
   text-align: center;
   background-color: ${colors.primary};
   color: ${colors.light};
-  min-width: 115px;
-  height: 25px;
   border-radius: 10px;
   justify-content: center;
   display: flex;
@@ -47,13 +42,22 @@ function TitleTags(props) {
   const data = props.data;
   const dataTags = data.tags;
   return (
-    <TitleContainer>
-      <PageTitle>{data.title}</PageTitle>
-      <PageSubtitle>{data.location}</PageSubtitle>
-      <PageTagsContainer>
+    <TitleContainer className="apartment_page_profil_container">
+      <PageTitle className="apartment_page_profil_container_title">
+        {data.title}
+      </PageTitle>
+      <PageSubtitle className="apartment_page_profil_container_subtitle">
+        {data.location}
+      </PageSubtitle>
+      <PageTagsContainer className="apartment_page_profil_container_tags">
         {/* {dataTags} */}
         {dataTags?.map((tag) => (
-          <PageTags key={tag}>{tag}</PageTags>
+          <PageTags
+            className="apartment_page_profil_container_tags_item"
+            key={tag}
+          >
+            {tag}
+          </PageTags>
         ))}
       </PageTagsContainer>
     </TitleContainer>

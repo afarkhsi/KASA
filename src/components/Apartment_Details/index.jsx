@@ -16,14 +16,12 @@ const DetailsContainer = styled.div`
   display: flex;
   flex-direction: column;
   // justify-content: space-between;
-  max-height: 250px;
 `;
 
 const DetailDropdown = styled.div`
   background-color: ${colors.primary};
   // margin: auto;
   width: 100%;
-  height: 52px;
   border-radius: 10px;
   cursor: pointer;
   display: flex;
@@ -32,7 +30,6 @@ const DetailDropdown = styled.div`
 `;
 
 const DetailDropdownTitle = styled.h3`
-  font-size: 18px;
   color: ${colors.light};
   font-weight: 500;
   text-align: start;
@@ -51,7 +48,6 @@ const DetailDropdownTitle = styled.h3`
 // `;
 
 const DetailDropdownMenuStuff = styled.div`
-  font-size: 18px;
   font-weight: 400;
   text-align: center;
   max-height: 200px;

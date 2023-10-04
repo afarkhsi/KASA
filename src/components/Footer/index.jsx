@@ -10,8 +10,6 @@ const FooterContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  // margin-top: 55px;
-  margin: auto -10px 0 -10px;
 `;
 
 const FooterLogo = styled.img`

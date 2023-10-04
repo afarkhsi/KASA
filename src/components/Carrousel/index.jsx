@@ -4,8 +4,6 @@ import ArrowImg from '../../assets/arrow.svg';
 import './style.css';
 
 const CarrouselContainer = styled.div`
-  max-width: 1240px;
-  height: 415px;
   margin: auto;
   border-radius: 10px;
   position: relative;

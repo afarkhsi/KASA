@@ -5,30 +5,21 @@ import Profil from '../../components/Apartment_Profil';
 import DropDowns from '../../components/Apartment_Details';
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-// import DropDownsAbout from '../../components/About_Dropdowns';
-// import { Loader } from '../../utils/styles/Atoms';
-// import { useSearchParams } from 'react-router-dom';
-// import ApartmentTest from '../../components/Apartment_test';
 import Error from '../../components/Error';
+import './style.css';
 
 const ApartmentWrapper = styled.main`
   max-width: 1240px;
-  margin: auto;
+  margin: 0 auto;
+  width: 100%;
 `;
 
 const ProfilWrapper = styled.section`
   display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
-}
 `;
 
 const DropdownsWrapper = styled.section`
   max-width: 1240px;
-  margin-top: 50px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
 `;
 
 // const LoaderWrapper = styled.div`
@@ -73,23 +64,20 @@ function Apartment() {
   return (
     <ApartmentWrapper className="apartment_page">
       {/* data: {JSON.stringify(data)} */}
-      <Carrousel
-        pictures={data.pictures}
-        className="apartment_page_caroussel_img"
-      />
+      <Carrousel pictures={data.pictures} />
       <ProfilWrapper className="apartment_page_profil">
         <TitleTags data={data} className="apartment_page_profil_title_tags" />
         <Profil data={data} className="apartment_page_profil_info" />
       </ProfilWrapper>
       {/* <DropDowns data={data} className="apartment_page_dopdowns" /> */}
-      <DropdownsWrapper>
+      <DropdownsWrapper className="apartment_page_dopdowns">
         <DropDowns
-          className="apartment_page_dopdowns"
+          className="apartment_page_dopdown"
           Title="Description"
           Text={data.description}
         />
         <DropDowns
-          className="apartment_page_dopdowns"
+          className="apartment_page_dopdown"
           Title="Équipements"
           Text={equipements}
         />
