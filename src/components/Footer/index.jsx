@@ -24,6 +24,7 @@ const FooterCopyright = styled.span`
   position: absolute;
 `;
 
+// Function generating Footer in all pages
 function Footer() {
   return (
     <FooterContainer className="footer_container">

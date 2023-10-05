@@ -33,6 +33,7 @@ const ReturnMain = styled(Link)`
   text-align: center;
 `;
 
+// Function generating Error when the url is undifined or false
 function Error() {
   return (
     <ErrorWrapper className="error_container">

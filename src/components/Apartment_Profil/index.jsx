@@ -39,6 +39,7 @@ const Star = styled.img`
   background: none;
 `;
 
+// Function generating Profil in Apartment Page
 function Profil(props) {
   const data = props.data;
   const profilName = data?.host?.name;

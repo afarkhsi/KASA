@@ -38,6 +38,7 @@ const PageTags = styled.span`
   padding: 0 5px;
 `;
 
+// Function generating Title and Tags in Apartment Page
 function TitleTags(props) {
   const data = props.data;
   const dataTags = data.tags;

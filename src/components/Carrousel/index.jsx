@@ -61,6 +61,7 @@ const CarrouselPictureNumber = styled.span`
   margin-bottom: 26px;
 `;
 
+// Function generating Carrousel in Apartment Page
 function Carrousel(props) {
   const pictures = props.pictures;
   const [currentPicture, setCurrentPicture] = useState(0);

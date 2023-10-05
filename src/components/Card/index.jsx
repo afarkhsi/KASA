@@ -38,13 +38,13 @@ const CardTitle = styled.h2`
   color: ${colors.light};
 `;
 
+// Function generating Cards in Home Page
 function Cards({ id, title, cover }) {
   const state = {
     apartmentId: id,
   };
 
   return (
-    // <CardsContainer className="Home_container_offers">
     <Card
       to={`/Appartement/${state?.apartmentId}`}
       state={state}
@@ -60,16 +60,16 @@ function Cards({ id, title, cover }) {
         {title}
       </CardTitle>
     </Card>
-    // {/* </CardsContainer> */}
   );
 }
 
+//PropTypes are defined as required
 Cards.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   cover: PropTypes.any.isRequired,
 };
-
+//Default propTypes if an error occures in data asignement
 Cards.defaultProps = {
   id: 'Un id par default',
   title: 'Une titre par default',

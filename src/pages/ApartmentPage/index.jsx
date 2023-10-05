@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Carrousel from '../../components/Carrousel';
 import TitleTags from '../../components/Apartment_Title';
 import Profil from '../../components/Apartment_Profil';
-import DropDowns from '../../components/Apartment_Details';
+import DropDowns from '../../components/Collapse_Details';
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Error from '../../components/Error';
@@ -22,6 +22,7 @@ const DropdownsWrapper = styled.section`
   max-width: 1240px;
 `;
 
+// Function generating Apartment Page
 function Apartment() {
   const location = useLocation();
   const [data, setData] = useState([]);

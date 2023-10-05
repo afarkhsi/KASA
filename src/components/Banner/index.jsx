@@ -32,6 +32,7 @@ const BannerTitle = styled.h1`
   padding: 0px 15px;
 `;
 
+// Function generating Banner in Home Page and About Page
 function Banner(props) {
   const imageUrl = props.imageUrl;
   let textBanner = props.text;

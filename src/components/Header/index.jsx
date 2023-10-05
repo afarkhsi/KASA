@@ -26,6 +26,7 @@ const StyledLink = styled(NavLink)`
   }
 `;
 
+// Function generating Header in all pages
 function Header() {
   return (
     <NavContainer className="header">
