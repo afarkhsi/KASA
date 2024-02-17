@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import colors from '../../utils/styles/colors';
 import Banner from '../../components/Banner';
-import DropDowns from '../../components/Collapse_Details';
+import DropDowns from '../../components/Collapse_Details/DropDowns';
 import Montagnes from '../../assets/Montagnes.png';
 import dataAbout from '../../data/aboutData.json';
 import './style.css';

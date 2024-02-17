@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Carrousel from '../../components/Carrousel';
 import TitleTags from '../../components/Apartment_Title';
 import Profil from '../../components/Apartment_Profil';
-import DropDowns from '../../components/Collapse_Details';
+import DropDowns from '../../components/Collapse_Details/DropDowns';
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Error from '../../components/Error';
@@ -38,13 +38,11 @@ function Apartment() {
 
   if (data == null) return <div>Loading ....</div>;
 
-  const equipements =
-    data.equipments &&
-    data.equipments.map((item, index) => (
-      <li key={index} className="dropdown_list_item">
-        {item}
-      </li>
-    ));
+  const equipements = data?.equipments?.map((item, index) => (
+    <li key={index} className="dropdown_list_item">
+      {item}
+    </li>
+  ));
   console.log('tessst:', equipements);
 
   return (

@@ -1,8 +1,9 @@
 import colors from '../../utils/styles/colors';
 import styled from 'styled-components';
-import { useState } from 'react';
+// import { useState } from 'react';
 import './style.css';
 import ArrowImg from '../../assets/arrow.svg';
+import useDropDowns from './useDropDowns';
 
 const DetailsContainer = styled.div`
   display: flex;
@@ -41,18 +42,45 @@ const DetailDropdownMenuStuff = styled.div`
 `;
 
 // Function generating Dropdowns in Apartment Page and About Page
-function DropDowns(props) {
-  const [open, setOpen] = useState(false);
+// function DropDowns(props) {
+//   const [open, setOpen] = useState(false);
+//   return (
+//     <DetailsContainer className="dropdown_container">
+//       <DetailDropdown
+//         className="dropdown_button"
+//         onClick={() => {
+//           setOpen(!open);
+//         }}
+//       >
+//         <DetailDropdownTitle className="dropdown_button_title">
+//           {props.Title}
+//         </DetailDropdownTitle>
+//         <img
+//           className={open ? 'arrow spinned' : 'arrow'}
+//           src={ArrowImg}
+//           alt="arrow"
+//         />
+//       </DetailDropdown>
+//       <DetailDropdownMenuStuff
+//         className={`dropdown_stuff ${open ? 'active' : 'inactive'}`}
+//       >
+//         {props.Text}
+//       </DetailDropdownMenuStuff>
+//     </DetailsContainer>
+//   );
+// }
+
+const DropDowns = ({ Title, Text }) => {
+  const { open, handleCollapseToggle } = useDropDowns();
+
   return (
     <DetailsContainer className="dropdown_container">
       <DetailDropdown
         className="dropdown_button"
-        onClick={() => {
-          setOpen(!open);
-        }}
+        onClick={handleCollapseToggle}
       >
         <DetailDropdownTitle className="dropdown_button_title">
-          {props.Title}
+          {Title}
         </DetailDropdownTitle>
         <img
           className={open ? 'arrow spinned' : 'arrow'}
@@ -63,10 +91,10 @@ function DropDowns(props) {
       <DetailDropdownMenuStuff
         className={`dropdown_stuff ${open ? 'active' : 'inactive'}`}
       >
-        {props.Text}
+        {Text}
       </DetailDropdownMenuStuff>
     </DetailsContainer>
   );
-}
+};
 
 export default DropDowns;
